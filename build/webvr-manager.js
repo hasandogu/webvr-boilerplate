@@ -349,7 +349,7 @@ function WebVRManager(renderer, effect, params) {
 
     // Only enable VR mode if there's a VR device attached or we are running the
     // polyfill on mobile.
-    if (!this.isVRCompatibleOverride) {
+    if (hmd && !this.isVRCompatibleOverride) {
       this.isVRCompatible =  !hmd.isPolyfilled || Util.isMobile();
     }
 
